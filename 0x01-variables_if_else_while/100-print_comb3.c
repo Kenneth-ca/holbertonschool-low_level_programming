@@ -22,7 +22,7 @@ int main(void)
 	{
 		putchar(cont + 48);
 		putchar(numero + 48);
-	xc	if (cont * 10 + numero < 89)
+		if (cont * 10 + numero < 89)
 		{
 		putchar(054);
 		putchar(040);
