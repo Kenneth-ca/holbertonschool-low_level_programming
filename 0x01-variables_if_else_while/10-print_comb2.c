@@ -16,16 +16,19 @@ int main(void)
 
 	cont = 0;
 
-	for (cont = '0' ; cont <=  '9' ; cont++)
+	for (cont = 0 ; cont <=  9 ; cont++)
 	{
-	for (numero = '0' ; numero <= '9' ; numero++)
+	for (numero = 0 ; numero <= 9 ; numero++)
 	{
-		putchar(cont);
-		putchar(numero);
+		putchar(cont+48);
+		putchar(numero+48);
+		if (numero * 10 + cont < 99)
+		{ 
 		putchar(054);
 		putchar(040);
 		}
-}
+	}
+	}
 	putchar(012);
 	return (0);
 }
