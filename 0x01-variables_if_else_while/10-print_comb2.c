@@ -20,10 +20,10 @@ int main(void)
 	{
 	for (numero = 0 ; numero <= 9 ; numero++)
 	{
-		putchar(cont+48);
-		putchar(numero+48);
+		putchar(cont + 48);
+		putchar(numero + 48);
 		if (numero * 10 + cont < 99)
-		{ 
+		{
 		putchar(054);
 		putchar(040);
 		}
