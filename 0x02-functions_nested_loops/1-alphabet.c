@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
+ * print_alphabet - check the code for Holberton School students
  *
  * Return: Always 0 (Success)
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
 
 int abc;
@@ -15,5 +15,4 @@ for (abc = 'a'; abc <= 'z' ; abc++)
 	_putchar(abc);
 }
 	_putchar('\n');
-	return (0);
 }
