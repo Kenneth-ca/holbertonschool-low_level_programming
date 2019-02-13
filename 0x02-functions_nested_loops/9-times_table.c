@@ -15,7 +15,7 @@ for (n1 = 0; n1 < 10; n1++)
 	for (n2 = 0; n2 < 10; n2++)
 	{
 		table = n1 * n2;
-		if (table <= 9)
+		if (table <= 9 && n2 != 0)
 		_putchar(32);
 		if (table > 9)
 		_putchar(table / 10 + '0');
