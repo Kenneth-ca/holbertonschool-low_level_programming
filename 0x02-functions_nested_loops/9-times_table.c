@@ -14,19 +14,19 @@ for (n1 = 0; n1 < 10; n1++)
 {
 	for (n2 = 0; n2 < 10; n2++)
 	{
-	table = n1 * n2;
-	if (table > 9)
-	_putchar(table / 10 + '0');
-	_putchar(table % 10 + '0');
-	if (n2 < 9)
-	{
-	_putchar(',');
-	_putchar(32);
+		table = n1 * n2;
+		if (table <= 9)
+		_putchar(32);
+		if (table > 9)
+		_putchar(table / 10 + '0');
+		_putchar(table % 10 + '0');
+		if (n2 < 9)
+		{
+		_putchar(',');
+		_putchar(32);
+		}
 	}
-	if (table < 9)
-	_putchar(32);
-	}
-	_putchar(10);
+_putchar(10);
 
 }
 }
