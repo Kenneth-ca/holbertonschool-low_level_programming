@@ -2,7 +2,7 @@
 
 /**
  * _isupper - check the code for Holberton School students
- * @c: argument for islower function
+ * @c: argument for the function
  *
  * Return: Always 0 (Success)
  */
