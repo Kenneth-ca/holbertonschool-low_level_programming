@@ -19,6 +19,9 @@ for (cont = 1; cont <= 100; cont++)
 		printf("Fizz ");
 	}
 	else if (cont % 5 == 0)
+		if (cont == 100)
+		printf("Buzz");
+		else
 		printf("Buzz ");
 	else
 		printf("%d ", cont);
