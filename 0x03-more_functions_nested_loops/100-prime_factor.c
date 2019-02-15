@@ -8,11 +8,11 @@
 int main(void)
 {
 
-unsigned long i, j, num, prime, large;
+unsigned long int i, j, num, prime, large;
 
 num = 612852475143;
 large = 0;
-for (i = 2; i <= num; i++)
+for (i = 2; i <= 15; i++)
 {
 	if (num % i == 0)
 	{
