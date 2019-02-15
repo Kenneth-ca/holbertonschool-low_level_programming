@@ -11,7 +11,7 @@ void print_number(int n)
 int mil, cen, dec, uni, m;
 if (n < 0)
 {
-_putchar('-');
+_putchar(45);
 m = -n;
 }
 else
@@ -28,12 +28,12 @@ uni = m % 10;
 			if (m > 999)
 			{
 			mil = m / 1000;
-			_putchar(mil + '0');
+			_putchar(mil + 48);
 			}
-		_putchar(cen + '0');
+		_putchar(cen + 48);
 		}
-	_putchar(dec + '0');
+	_putchar(dec + 48);
 	}
-_putchar(uni + '0');
+_putchar(uni + 48);
 }
 }
