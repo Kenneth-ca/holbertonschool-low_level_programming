@@ -16,7 +16,7 @@ i = 0;
 		i++;
 	lenght = i;
 	if (i % 2 != 0)
-		n = (lenght - 1) / 2;
+		n = (lenght + 1) / 2;
 	else
 		n = lenght / 2;
 	for (i = n; i < lenght; i++)
