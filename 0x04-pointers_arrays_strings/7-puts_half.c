@@ -10,15 +10,16 @@
  */
 void puts_half(char *str)
 {
-int i, n;
+int i, n, lenght;
 i = 0;
 	while (str[i] != '\0')
 		i++;
-	if (i % 2 == 0)
-		n = i / 2;
+	lenght = i;
+	if (i % 2 != 0)
+		n = (lenght - 1) / 2;
 	else
-		n = (i - 1) / 2;
-	for (i = n; str[i] != '\0'; i++)
+		n = lenght / 2;
+	for (i = n; i < lenght; i++)
 		_putchar(*(str + i));
 _putchar(10);
 }
