@@ -20,7 +20,7 @@ int i = 0;
 	}
 	while (i < n)
 	{
-		dest[i] = '\0';	
+		dest[i] = '\0';
 		i++;
 	}
 return (dest);
