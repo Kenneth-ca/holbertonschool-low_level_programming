@@ -2,19 +2,20 @@
 #include <stdio.h>
 
 /**
- * *_strcat - check the code for Holberton School students.
+ * *_strncat - check the code for Holberton School students.
  *
  * @dest: argument for the function.
  * @src: argument for the function.
+ * @n: argument for the function.
  *
  * Return: Always 0.
  */
-char _strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
-int i, lenght;
-	while (dest[i] != '\0')
+int i, lenght = 0;
+	while (dest[lenght] != '\0')
 		lenght++;
-	for (i = 0; dest[i] != '\0'; i++)
+	for (i = 0; src[i] != '\0' && i < n; i++)
 		dest[lenght + i] = src[i];
 return (dest);
 }
