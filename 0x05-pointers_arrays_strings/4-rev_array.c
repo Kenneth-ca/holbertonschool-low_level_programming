@@ -2,14 +2,19 @@
 #include <stdio.h>
 
 /**
- * *_strcat - check the code for Holberton School students.
+ * reverse_array - check the code for Holberton School students.
  *
- * @dest: argument for the function.
- * @src: argument for the function.
+ * @a: argument for the function.
+ * @n: argument for the function.
  *
  * Return: Always 0.
  */
-char *_strcat(char *dest, char *src)
+void reverse_array(int *a, int n)
 {
-    return (0);
+int i, aux = 0;
+n = n - 1;
+	for (i = 0; a[i] != '\0'; i++)
+		aux = a[i];
+		a[i] = a[n - i];
+		a[n - i] = aux;
 }
