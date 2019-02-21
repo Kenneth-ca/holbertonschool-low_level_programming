@@ -2,14 +2,25 @@
 #include <stdio.h>
 
 /**
- * *_strcat - check the code for Holberton School students.
+ * *_strcmp - check the code for Holberton School students.
  *
- * @dest: argument for the function.
- * @src: argument for the function.
+ * @s1: argument for the function.
+ * @s2: argument for the function.
  *
  * Return: Always 0.
  */
-char *_strcat(char *dest, char *src)
+int _strcmp(char *s1, char *s2)
 {
-    return (0);
+int i = 0, diferencia = 0;
+	if (s1[i] != s2[i])
+	{
+		diferencia = s1[i] - s2[i];
+	}
+	else
+	{
+		diferencia = 0;
+		if (s1[i] != '\0')
+			i++;
+	}
+return (diferencia);
 }
