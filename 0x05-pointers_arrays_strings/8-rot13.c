@@ -2,14 +2,29 @@
 #include <stdio.h>
 
 /**
- * *_strcat - check the code for Holberton School students.
+ * *root13 - check the code for Holberton School students.
  *
- * @dest: argument for the function.
- * @src: argument for the function.
+ * @s: argument for the function.
  *
  * Return: Always 0.
  */
-char *_strcat(char *dest, char *src)
+char *rot13(char *s)
 {
-    return (0);
+int i, k;
+char primeros[] = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+char ultimos[] = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
+	for (i = 0; s[i] != '\0' ; i++)
+	{
+		k = 0;
+		while (s[k])
+		{
+			if (s[i] == primeros[k])
+			{
+				s[i] = ultimos[k];
+				break;
+			}
+			k++;
+		}
+	}
+return (s);
 }
