@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * *root13 - check the code for Holberton School students.
+ * *rot13 - check the code for Holberton School students.
  *
  * @s: argument for the function.
  *
