@@ -2,14 +2,27 @@
 #include <stdio.h>
 
 /**
- * *_strcat - check the code for Holberton School students.
+ * *leet - check the code for Holberton School students.
  *
- * @dest: argument for the function.
- * @src: argument for the function.
+ * @s: argument for the function.
  *
  * Return: Always 0.
  */
-char *_strcat(char *dest, char *src)
+char *leet(char *s)
 {
-    return (0);
+int i;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (s[i] == 97 || s[i] == 65)
+			s[i] = 52;
+		if (s[i] == 101 || s[i] == 69)
+			s[i] = 51;
+		if (s[i] == 111 || s[i] == 79)
+			s[i] = 48;
+		if (s[i] == 116 || s[i] == 84)
+			s[i] = 55;
+		if (s[i] == 108 || s[i] == 76)
+			s[i] = 49;
+	}
+return (s);
 }
