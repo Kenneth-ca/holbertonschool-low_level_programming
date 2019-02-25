@@ -16,5 +16,7 @@ int i;
 		if (s[i] == c)
 			return (s + i);
 	}
+	if (s[i + 1] == c)
+		return (s + i);
 return (NULL);
 }
