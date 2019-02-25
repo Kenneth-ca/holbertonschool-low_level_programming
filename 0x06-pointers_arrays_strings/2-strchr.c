@@ -16,8 +16,7 @@ int i;
 		if (s[i] == c)
 			return (s + i);
 	}
-if (s[i] == '\0')
+if (s[i] == c)
 	return (s + i);
-else
-	return (0);
+return (NULL);
 }
