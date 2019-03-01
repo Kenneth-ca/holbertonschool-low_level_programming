@@ -6,6 +6,7 @@
  *
  * @n: Argument for the function.
  * @i: Argument for the function.
+ * @compare: Argument for the function.
  *
  * Return: 1 if prime number, otherwise 0..
  */
@@ -38,7 +39,7 @@ int primo(int n, int i, int compare)
 	}
 i++;
 if (i < 98)
-	return(primo(n, i, compare));
+	return (primo(n, i, compare));
 return (0);
 }
 /**
