@@ -16,12 +16,12 @@ int div = 0;
 int money = 0;
 char coins[] = {25, 10, 5, 2, 1};
 
-	if (argc != 2)
+money = atoi(argv[1]);
+	if (argc != 2 || money < 0)
 	{
 		printf("Error\n");
 		return (1);
 	}
-money = atoi(argv[1]);
 	for (i = 0; coins[i] != '\0'; i++)
 	{
 		if (money % coins[i] == 0)
