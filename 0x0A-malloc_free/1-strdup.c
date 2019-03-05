@@ -14,14 +14,14 @@ int i = 0;
 char *s;
 int size = 0;
 
-	if(str == 0)
+	if (str == 0)
 		return (NULL);
 	while (str[i] != '\0')
 	{
 		size++;
 		i++;
 	}
-	s = malloc(size * sizeof(char));
+	s = malloc((size + 1) * sizeof(char));
 	if (s == NULL)
 		return (NULL);
 	i = 0;
