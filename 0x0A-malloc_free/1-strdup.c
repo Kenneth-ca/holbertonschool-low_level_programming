@@ -14,6 +14,8 @@ int i = 0;
 char *s;
 int size = 0;
 
+	if(str == 0)
+		return (NULL);
 	while (str[i] != '\0')
 	{
 		size++;
