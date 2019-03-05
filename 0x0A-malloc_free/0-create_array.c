@@ -16,14 +16,13 @@ char *s;
 
 	if (size == 0)
 		return (NULL);
-	s = malloc((size + 1) * sizeof(char));
+	s = malloc(size * sizeof(char));
 	if (s == NULL)
-		return (NULL);	
+		return (NULL);
 	while (i < size)
 	{
 		s[i] = c;
 		i++;
 	}
-	s[i] = '\0';
 return (s);
 }
