@@ -16,6 +16,10 @@ char *s;
 int size_s1 = 0;
 int size_s2 = 0;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	while (s1[i] != '\0')
 	{
 		size_s1++;
@@ -27,7 +31,7 @@ int size_s2 = 0;
 		size_s2++;
 		i++;
 	}
-	s = malloc((size_s1 + size_s2) * sizeof(char));
+	s = malloc((size_s1 + size_s2 + 1) * sizeof(char));
 	if (s == NULL)
 		return (NULL);
 	i = 0;
@@ -44,5 +48,6 @@ int size_s2 = 0;
 		}
 	i++;
 	}
+	s[i] = '\0';
 return (s);
 }
