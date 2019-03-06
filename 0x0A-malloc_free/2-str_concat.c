@@ -3,8 +3,9 @@
 #include <stdlib.h>
 
 /**
- * _str_concat - A function that concatenates
- * @str: argument for the function
+ * str_concat - A function that concatenates
+ * @s1: argument for the function
+ * @s2: argument for the function
  *
  * Return: Nothing.
  */
@@ -26,7 +27,7 @@ int size_s2 = 0;
 		size_s2++;
 		i++;
 	}
-	s = malloc((size_s1 + size_s2 + 1) * sizeof(char));
+	s = malloc((size_s1 + size_s2) * sizeof(char));
 	if (s == NULL)
 		return (NULL);
 	i = 0;
@@ -43,6 +44,5 @@ int size_s2 = 0;
 		}
 	i++;
 	}
-	s[i] = '\0';
 return (s);
 }
