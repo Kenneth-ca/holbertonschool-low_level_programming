@@ -37,8 +37,9 @@ unsigned int size = 0;
 	}
 	while (j < n)
 	{
-		if (n < size)
-			s[i] = s2[j];
+		s[i] = s2[j];
+		if (j == size)
+			break;
 		j++;
 		i++;
 	}
