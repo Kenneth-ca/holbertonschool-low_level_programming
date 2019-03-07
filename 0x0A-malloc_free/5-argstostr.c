@@ -26,7 +26,7 @@ for (i = 0; i < ac; i++)
 		size++;
 	}
 }
-s = malloc(sizeof(char) * ac * size + ac);
+s = malloc(sizeof(char) * ac * size + ac -1);
 if (s == NULL)
 {
 	free(s);
