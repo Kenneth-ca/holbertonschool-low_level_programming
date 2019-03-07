@@ -18,23 +18,28 @@ if (width <= 0)
 	return (NULL);
 if (height <= 0)
 	return (NULL);
-s = malloc(sizeof(int*) * width);
+s = malloc(sizeof(int *) * height);
 if (s == NULL)
 {
+	free(s);
 	return (NULL);
 }
-for (i = 0; i < width; i++)
+for (i = 0; i < height; i++)
 {
-	s[i] = malloc(sizeof(int) * height);
+	s[i] = malloc(sizeof(int) * width);
 	if (s[i] == NULL)
 	{
-		free(s[i]);
+		for (; i > 0; i--)
+		{
+			free(s[i]);
+		}
 		free(s);
+		return (NULL);
 	}
 }
-for (i = 0; i < width; i++)
+for (i = 0; i < height; i++)
 {
-	for (j = 0; j < height; j++)
+	for (j = 0; j < width; j++)
 	{
 		s[i][j] = 0;
 	}
