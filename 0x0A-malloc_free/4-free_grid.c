@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * free_grid - Frees 2 dimentional grid
+ * free_grid - Frees memory from a given grid
  * @grid: argument for the function
  * @height: argument for the function
  *
@@ -11,27 +11,14 @@
  */
 void free_grid(int **grid, int height)
 {
-int i = 0;
-char *s;
-int size = 0;
+int i;
 
-	for (i = 0; i < height;
-
-	if (str == 0)
-		return (NULL);
-	while (str[i] != '\0')
+	if (grid != NULL || height > 0)
 	{
-		size++;
-		i++;
+		for (i = 0; i < height; i++)
+		{
+			free(grid[i]);
+		}
+		free(grid);
 	}
-	s = malloc((size + 1) * sizeof(char));
-	if (s == NULL)
-		return (NULL);
-	i = 0;
-	while (str[i] != '\0')
-	{
-		s[i] = str[i];
-		i++;
-	}
-return (s);
 }
