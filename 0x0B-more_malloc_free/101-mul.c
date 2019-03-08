@@ -1,10 +1,12 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - multiplies two numbers
- * @b: argument for the function
+ * @argc: argument for the function
+ * @argv: argument for the function
  *
  * Return: 0.
  */
@@ -14,13 +16,13 @@ int mult = 0;
 
 if (argc == 3)
 {
-	mult = atoi(argc[1]) * atoi(argv[2]);
+	mult = atoi(argv[1]) * atoi(argv[2]);
 	printf("%d\n", mult);
 }
 else
 {
 	printf("Error\n");
-	return (98);
+	exit(98);
 }
 return (0);
 }
