@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "dog.h"
 
-/*
+/**
  * init_dog - a function that initialize a variable a type
  *
  * @d: structure dog contains all the basic info
@@ -10,10 +10,12 @@
  * @owner: third member of the structure
  *
  * return - nothing.
-*/
+**/
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+if (d == NULL)
+	return;
 d->name = name;
 d->age = age;
 d->owner = owner;
