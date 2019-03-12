@@ -23,7 +23,10 @@ int size = 0;
 	}
 	s = malloc((size + 1) * sizeof(char));
 	if (s == NULL)
+	{
+		free(s);
 		return (NULL);
+	}
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -45,22 +48,27 @@ return (s);
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-char *n;
-char *o;
-float a;
 dog_t *perro_nuevo;
 
-a = age;
-o = _strdup(owner);
-n = _strdup(name);
-perro_nuevo = malloc(sizeof(n) + sizeof(o) + (a *sizeof(float)));
+perro_nuevo = malloc(sizeof(struct dog));
 	if (perro_nuevo == NULL)
 	{
 		free(perro_nuevo);
 		return (NULL);
 	}
-perro_nuevo->name = n;
-perro_nuevo->owner = o;
-perro_nuevo->age = a;
+perro_nuevo->owner = _strdup(owner);
+	if (perro_nuevo->owner == NULL)
+	{
+		free(perro_nuevo);
+		return (NULL);
+	}
+perro_nuevo->name = _strdup(name);
+	if (perro_nuevo->name == NULL)
+	{
+		free(perro_nuevo->owner);
+		free(perro_nuevo);
+		return (NULL);
+	}
+perro_nuevo->age = age;
 return (perro_nuevo);
 }
