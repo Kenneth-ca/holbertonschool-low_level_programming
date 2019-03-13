@@ -33,6 +33,7 @@ int size = 0;
 		s[i] = str[i];
 		i++;
 	}
+	s[i] = '\0';
 return (s);
 }
 
