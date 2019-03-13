@@ -12,7 +12,7 @@
 int int_index(int *array, int size, int (*cmp)(int))
 {
 int i, compare = 0;
-if (array && size && cmp)
+if (array && cmp)
 {
 	if (size <= 0)
 		return (-1);
@@ -24,9 +24,9 @@ if (array && size && cmp)
 			break;
 		}
 	}
+}
 	if (compare != 0)
 		return (i);
 	else
 		return (-1);
-}
 }
