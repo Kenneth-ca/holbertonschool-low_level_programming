@@ -12,18 +12,21 @@
 int int_index(int *array, int size, int (*cmp)(int))
 {
 int i, compare = 0;
-if (size <= 0)
-	return (-1);
-for (i = 0; i < size; i++)
+if (array && size && cmp)
 {
-	compare = (*cmp)(array[i]);
-	if (compare != 0)
+	if (size <= 0)
+		return (-1);
+	for (i = 0; i < size; i++)
 	{
-		break;
+		compare = (*cmp)(array[i]);
+		if (compare != 0)
+		{
+			break;
+		}
 	}
+	if (compare != 0)
+		return (i);
+	else
+		return (-1);
 }
-if (compare != 0)
-	return (i);
-else
-	return (-1);
 }
