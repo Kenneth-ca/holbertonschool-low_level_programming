@@ -21,7 +21,7 @@ va_start(ap, n);
 	printf("%d", va_arg(ap, int));
 	if (i == n - 1)
 		printf("\n");
-	else
+	else if (separator != NULL)
 		printf("%s", separator);
 	}
 va_end(ap);
