@@ -24,13 +24,10 @@ va_start(ap, n);
 			printf("%p", s);
 		else
 			printf("%s", s);
-		if (i == n - 1)
-		{
-			printf("\n");
-		}
-		else if (separator != NULL)
+		if ((separator != NULL) && (i < n - 1))
 			printf("%s", separator);
 	}
+printf("\n");
 va_end(ap);
 
 }
