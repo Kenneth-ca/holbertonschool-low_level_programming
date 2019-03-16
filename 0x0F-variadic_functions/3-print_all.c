@@ -3,14 +3,30 @@
 #include "variadic_functions.h"
 
 /**
- * print_strings - a function that prints strings
- * @separator: string printed between the strings
- * @n: number of parameters
+ * go_to_func - a function that prints anything
+ * @format: format of what will be printed
  *
  * Return: nothing
 */
 
-void print_strings(const char *separator, const unsigned int n, ...)
+typedef struct tp
+{
+	char type;
+	char *symbol;
+} tp_t;
+
+tp_t tps[] = {
+	{"c", "%c"},
+	{"
+
+/**
+ * print_all - a function that prints anything
+ * @format: format of what will be printed
+ *
+ * Return: nothing
+*/
+
+void print_all(const char * const format, ...)
 {
 va_list ap;
 unsigned int i;

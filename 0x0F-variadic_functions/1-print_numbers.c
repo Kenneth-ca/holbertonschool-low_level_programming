@@ -7,7 +7,7 @@
  * @separator: string printed between the numbers
  * @n: number of parameters
  *
- * Return: the sum
+ * Return: nothing
 */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
