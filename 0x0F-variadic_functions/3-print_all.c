@@ -1,52 +1,51 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
-
-/**
- * go_to_func - a function that prints anything
- * @format: format of what will be printed
- *
- * Return: nothing
-*/
-
-typedef struct tp
-{
-	char type;
-	char *symbol;
-} tp_t;
-
-tp_t tps[] = {
-	{"c", "%c"},
-	{"
-
 /**
  * print_all - a function that prints anything
  * @format: format of what will be printed
- *
  * Return: nothing
 */
-
 void print_all(const char * const format, ...)
 {
 va_list ap;
-unsigned int i;
-const char *s;
+int i = 0, j = 0;
+char *str;
 
-va_start(ap, n);
-	for (i = 0; i < n; i++)
+va_start(ap, format);
+	while (format[i])
 	{
-		s = va_arg(ap, char *);
-		if (s == NULL)
-			printf("%p", s);
-		else
-			printf("%s", s);
-		if (i == n - 1)
+		switch (format[i])
 		{
-			printf("\n");
+			case 'c':
+				printf("%c", va_arg(ap, int));
+				j = 1;
+				break;
+			case 'i':
+				printf("%i", va_arg(ap, int));
+				j = 1;
+				break;
+			case 'f':
+				printf("%f", va_arg(ap, double));
+				j = 1;
+				break;
+			case 's':
+				str = va_arg(ap, char *);
+				if (str == NULL)
+				{
+					printf("%p", str);
+					break;
+				}
+				printf("%s", str);
+				j = 1;
+				break;
+			default:
+				j = 0;
 		}
-		else if (separator != NULL)
-			printf("%s", separator);
+		if ((j) && (format[i + 1] != '\0'))
+			printf(", ");
+	i++;
 	}
+printf("\n");
 va_end(ap);
-
 }
