@@ -15,7 +15,10 @@ int length;
 
 while (h != NULL)
 {
-	printf("[%d] %s\n", h->len, h->str);
+	if (h->str == NULL)
+		printf("[%d] %p\n", h->len, h->str);
+	else
+		printf("[%d] %s\n", h->len, h->str);
 	h = h->next;
 	length++;
 }
