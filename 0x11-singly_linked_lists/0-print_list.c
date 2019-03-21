@@ -16,7 +16,7 @@ int length;
 while (h != NULL)
 {
 	if (h->str == NULL)
-		printf("[%d] %p\n", h->len, h->str);
+		printf("[0] %p\n", h->str);
 	else
 		printf("[%d] %s\n", h->len, h->str);
 	h = h->next;
