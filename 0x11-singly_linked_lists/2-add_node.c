@@ -4,20 +4,6 @@
 #include "lists.h"
 
 /**
- * _strlen - check the code for Holberton School students
- * @s: argument for the function
- *
- * Return: Always 0.
- */
-	int _strlen(const char *s)
-	{
-	int i;
-
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-/**
  * add_node - adds a new node at the beginning of a list.
  * @head: a pointer that enters to the function.
  * @str: a constant string that enters to the function.
@@ -36,8 +22,9 @@
 		free(new_node);
 		return (NULL);
 	}
+	while (str[length] != '\0')
+		length++;
 	new_str = strdup(str);
-	length = _strlen(new_str);
 
 	new_node->str = new_str;
 	new_node->len = length;
