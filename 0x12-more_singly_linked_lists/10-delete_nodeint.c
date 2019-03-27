@@ -3,9 +3,9 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - a function that deletes the node at a given position
+ * delete_nodeint_at_index - a function that deletes a node
  * @head: a pointer to a list
- * @idx: the index
+ * @index: the index
  *
  * Return: the sum.
  */
