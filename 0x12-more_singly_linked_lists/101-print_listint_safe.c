@@ -12,10 +12,10 @@ size_t print_listint_safe(const listint_t *head)
 {
 	int length = 0;
 
-	while (h != NULL)
+	while (head != NULL)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
+		printf("%d\n", head->n);
+		head = head->next;
 		length++;
 	}
 	return (length);
