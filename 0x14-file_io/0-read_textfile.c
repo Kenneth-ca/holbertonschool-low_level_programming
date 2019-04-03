@@ -30,5 +30,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	p_letters = read(fd, s, letters);
 	write(STDOUT_FILENO, s, p_letters);
+	close(fd);
 	return (p_letters);
 }
