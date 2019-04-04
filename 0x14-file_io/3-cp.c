@@ -22,27 +22,28 @@ void cp(const char *origin, char *destiny)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
 		origin),
 		exit(98);
-	fd_d = open(destiny, O_WRONLY | O_CREAT | O_TRUNC, 0662);
+	fd_d = open(destiny, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_o == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
 		destiny),
 		exit(98);
-	while (wr != 0)
+	rd = read(fd_o, buffer, 1024);
+	if (rd == -1)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
+		origin),
+		exit(98);
+	while (rd != 0)
 	{
-		rd = read(fd_o, buffer, 1024);
-		if (rd == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
-			origin);
-			exit(98);
-		}
 		wr = write(fd_d, buffer, rd);
 		if (wr == -1)
-		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
-			destiny);
+			destiny),
 			exit(99);
-		}
+		rd = read(fd_o, buffer, 1024);
+		if (rd == -1)
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
+			origin),
+			exit(98);
 	}
 	cl = close(fd_o);
 	if (cl == -1)
