@@ -1,9 +1,10 @@
 #include "lists.h"
 
 /**
- * dlistint_len -
+ * dlistint_len - a function that prints the number of elements
+ * @h: the list
  *
- * Return: 
+ * Return: the number of elements
  */
 size_t dlistint_len(const dlistint_t *h)
 {
