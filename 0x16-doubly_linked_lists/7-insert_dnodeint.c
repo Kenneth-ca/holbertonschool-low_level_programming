@@ -23,6 +23,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		node->n = n;
 		node->next = *h;
+		/* FOR DOUBLE LIST */
+		node->prev = NULL;
+		if (*h != NULL)
+			(*h)->prev = node;
+		/* <> */
 		*h = node;
 		return (*h);
 	}
@@ -35,6 +40,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			aux = temp->next;
 			temp->next = node;
 			node->next = aux;
+			if (aux != NULL)
+				aux->prev = node;
+			node->prev = temp;
 			return (node);
 		}
 		cont++;
