@@ -2,10 +2,11 @@
 
 /**
  * add_node - adds a new node for the hash
+ * @head: pointer to the nodes
  * @key: the key, can not be an empty string
- * @value: value associated with the key
+ * @val: value associated with the key
  *
- * Return: pointer to node
+ * Return: new pointer to node
  */
 hash_node_t *add_node(hash_node_t **head, const char *key, const char *val)
 {
@@ -23,10 +24,11 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *val)
 
 /**
  * hash_table_set - a function that adds an element to the hash table
+ * @ht: pointer to a hash table
  * @key: the key, can not be an empty string
  * @value: value associated with the key
  *
- * Return: 1 if it succeded, 0 otherwise 
+ * Return: 1 if it succeded, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
