@@ -11,18 +11,21 @@ def island_perimeter(grid):
             clear = 0
             perimeter += 4
             if (grid[i][j] == 1):
-                if (grid[i + 1][j] == 1):
-                    perimeter -= 1
-                    clear += 1
-                if (grid[i - 1][j] == 1):
-                    perimeter -= 1
-                    clear += 1
-                if (grid[i][j + 1] == 1):
-                    perimeter -= 1
-                    clear += 1
-                if (grid[i][j - 1] == 1):
-                    perimeter -= 1
-                    clear += 1
+                try:
+                    if (grid[i + 1][j] == 1):
+                        perimeter -= 1
+                        clear += 1
+                    if (grid[i - 1][j] == 1):
+                        perimeter -= 1
+                        clear += 1
+                    if (grid[i][j + 1] == 1):
+                        perimeter -= 1
+                        clear += 1
+                    if (grid[i][j - 1] == 1):
+                        perimeter -= 1
+                        clear += 1
+                except:
+                    pass
             if (clear == 0):
                 perimeter -= 4
     return perimeter
