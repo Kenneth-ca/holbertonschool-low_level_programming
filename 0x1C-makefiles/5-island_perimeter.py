@@ -15,12 +15,21 @@ def island_perimeter(grid):
                     if (grid[i + 1][j] == 1):
                         perimeter -= 1
                         clear += 1
+                except:
+                    pass
+                try:
                     if (grid[i - 1][j] == 1):
                         perimeter -= 1
                         clear += 1
+                except:
+                    pass
+                try:
                     if (grid[i][j + 1] == 1):
                         perimeter -= 1
                         clear += 1
+                except:
+                    pass
+                try:
                     if (grid[i][j - 1] == 1):
                         perimeter -= 1
                         clear += 1
