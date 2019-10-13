@@ -1,6 +1,6 @@
 #include "holberton.h"
 
-/*
+/**
  * print_times_table - prints the n times table
  * @n: number of times
  * Return> nothing
@@ -22,14 +22,12 @@ void print_times_table(int n)
 			else if (!(mul / 100))
 			{
 				_putchar((mul / 10) + '0');
-				_putchar((mul % 10) + '0');
-			}
+				_putchar((mul % 10) + '0'); }
 			else if (!(mul / 1000))
 			{
 				_putchar((mul / 100) + '0');
 				_putchar(((mul / 10) % 10) + '0');
-				_putchar((mul % 10) + '0');
-			}
+				_putchar((mul % 10) + '0'); }
 			if (j < n)
 			{
 				_putchar(',');
