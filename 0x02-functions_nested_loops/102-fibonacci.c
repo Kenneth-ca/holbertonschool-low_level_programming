@@ -9,11 +9,11 @@
 int main(void)
 {
 	int i;
-	long fib = 0, fib_prev = 1, fib_prev_prev = 0;
+	long fib = 0, fib_prev = 2, fib_prev_prev = 1;
 
 	printf("%li, ", fib_prev_prev);
 	printf("%li, ", fib_prev);
-	for (i = 0; i < 50; i++)
+	for (i = 2; i < 50; i++)
 	{
 		fib = fib_prev + fib_prev_prev;
 		printf("%li", fib);
