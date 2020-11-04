@@ -1,21 +1,34 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * find_listint_loop - finds a loop
- * @head: a pointer to a list
- *
- * Return: a pointer to a list.
+ * find_listint_loop - checks if a singly linked list has a cycle in it
+ * @head: pointer to head of list
+ * Return: 0 if there is no cycle, 1 if there is a cycle
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	int length = 0;
+	listint_t *a, *b;
 
-	while (head != NULL)
+	if (head == NULL)
+		return (0);
+	a = head;
+	b = head;
+	while ((a != NULL) && (b != NULL) && (b->next != NULL))
 	{
-		head = head->next;
-		length++;
+		a = a->next;
+		b = b->next->next;
+		if (a == b)
+			break;
 	}
-	return (head);
+	if (a != b)
+		return (NULL);
+	a = head;
+
+	while (a != b)
+	{
+		a = a->next;
+		b = b->next;
+	}
+
+	return (b);
 }
